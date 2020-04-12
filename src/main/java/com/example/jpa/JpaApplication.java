@@ -1,4 +1,4 @@
-package com.example.accessingdatajpa;
+package com.example.jpa;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,12 +12,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 @SpringBootApplication
-public class AccessingDataJpaApplication {
+public class JpaApplication {
 
-  private static final Logger log = LoggerFactory.getLogger(AccessingDataJpaApplication.class);
+  private static final Logger log = LoggerFactory.getLogger(JpaApplication.class);
 
   public static void main(String[] args) {
-    SpringApplication.run(AccessingDataJpaApplication.class);
+    SpringApplication.run(JpaApplication.class);
   }
 //
 //  @Bean

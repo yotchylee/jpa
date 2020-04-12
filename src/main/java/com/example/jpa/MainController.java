@@ -1,4 +1,4 @@
-package com.example.accessingdatajpa;
+package com.example.jpa;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
