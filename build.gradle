@@ -9,6 +9,12 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
+    maven {
+        url 'http://10.0.251.198:8081/nexus/content/groups/plugins-release/'
+    }
+    maven {
+        url 'http://10.0.251.198:8081/nexus/content/groups/libs-release/'
+    }
     maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
     mavenCentral()
 }
@@ -19,10 +25,15 @@ dependencies {
     
 //    runtimeOnly 'com.h2database:h2'
     runtimeOnly 'mysql:mysql-connector-java'
-    
+
+    compile 'com.alibaba:druid-spring-boot-starter:1.1.21'
+
     compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
     compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
     compile group: 'com.github.xiaoymin', name: 'swagger-bootstrap-ui', version: '1.9.3'
+
+    annotationProcessor 'org.projectlombok:lombok:1.18.4'
+    compileOnly 'org.projectlombok:lombok:1.18.4'
     
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'

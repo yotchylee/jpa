@@ -1,4 +1,4 @@
-package com.example.jpa;
+package com.example.jpa.entity;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -13,19 +13,22 @@ public class User {
   @ApiModelProperty(value = "主键",example="10")
   @Id
   @GeneratedValue(strategy=GenerationType.AUTO)
-  private Integer id;
+  private Long id;
 
-  @ApiModelProperty(value = "姓名",example="张三")
+  @ApiModelProperty(value = "名",example="三")
   private String name;
+
+  @ApiModelProperty(value = "姓",example="张")
+  private String lastName;
 
   @ApiModelProperty(value = "邮箱",example="google@gmail.com")
   private String email;
 
-  public Integer getId() {
+  public Long getId() {
     return id;
   }
 
-  public void setId(Integer id) {
+  public void setId(Long id) {
     this.id = id;
   }
 
@@ -43,5 +46,13 @@ public class User {
 
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  public String getLastName() {
+    return lastName;
+  }
+
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
   }
 }
